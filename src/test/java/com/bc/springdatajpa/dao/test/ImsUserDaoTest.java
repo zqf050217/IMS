@@ -26,7 +26,7 @@ public class ImsUserDaoTest extends BaseTest {
     ImsUserDao imsUserDao;
 
     @Test
-    public void test() {
+    public void findByUsername() {
         String username = "itsuki";
         String password = "123";
         String realname = "luoxu";
@@ -34,7 +34,7 @@ public class ImsUserDaoTest extends BaseTest {
         ImsUser imsUser = new ImsUser(username, password, realname, v, v, v, "default", v);
         imsUserDao.save(imsUser);
         ImsUser user = imsUserDao.findByUsername(username);
-        logger.info("取得的用户是{}", imsUser);
+        logger.info("取得的用户是 {}", imsUser.getRealname());
         assertTrue("取得的用户的密码与预想不一致", password.equals(user.getPassword()));
     }
 }

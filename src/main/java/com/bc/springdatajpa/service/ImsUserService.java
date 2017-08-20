@@ -58,7 +58,6 @@ public class ImsUserService {
     public Page<ImsUser> findAllByDepartment(final int department, int page, int size) {
         return imsUserDao.findAll((Root<ImsUser> root, CriteriaQuery<?> query, CriteriaBuilder cb) -> {
             Predicate predicate = cb.equal(root.get("department"), department);
-            query.where(predicate);
             return predicate;
         }, new PageRequest(page, size));
     }
