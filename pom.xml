@@ -163,16 +163,6 @@
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload.ver}</version>
         </dependency>
-        <dependency>
-  		<groupId>org.activiti</groupId>
-  		<artifactId>activiti-engine</artifactId>
-  		<version>${activiti.ver}</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.h2database</groupId>
-  		<artifactId>h2</artifactId>
-  		<version>${h2database.ver}</version>
-  	</dependency>
     </dependencies>
 
     <repositories>
